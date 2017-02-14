@@ -1,23 +1,23 @@
 var miIntervalo ;
-var contador=0;
+var contador = 0;
 
 function inicio()
 {
-	alert("function inicio.");
+	alert("Comienzo de la ejecución.");
 	miIntervalo = setInterval(SegundosEnElAire, 2000);
 	
 }//FIN DE LA FUNCIÓN inicio
 
 function SegundosEnElAire() {
 
-	contador=contador +1;
-    alert("Bienvenido a la UTN FRA, cantidad ="+contador);
+	contador += 1;
+    alert("Bienvenido a la UTN FRA. Cantidad: "+contador);
     
 }//FIN DE LA FUNCIÓN SegundosEnElAire
 
 function fin()
 {
-	alert("function fin.");
+	alert("Fin de la ejecución.");
 	clearInterval(miIntervalo);
 
 }//FIN DE LA FUNCIÓN fin

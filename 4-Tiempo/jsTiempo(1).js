@@ -1,15 +1,15 @@
 var miIntervalo ;
 
-function inicio()
-{	
-	alert("function inicio.");
-	miIntervalo = setInterval(SegundosEnElAire, 3000);
-	
-}//FIN DE LA FUNCIÓN inicio
+function inicio() {
 
-function SegundosEnElAire() {
 
-    alert("Bienvenido a la UTN FRA");
+	miIntervalo = setInterval(TresSegundos, 3000);
 
-}//FIN DE LA FUNCIÓN SegundosEnElAire
+}
+
+function TresSegundos () {
+
+	alert("¡Bienvenido a la UTN FRA!");
+
+}
 

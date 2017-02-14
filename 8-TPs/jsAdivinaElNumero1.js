@@ -12,8 +12,9 @@ var contadorIntentos = 0;
 
 function comenzar() {
 
-    numeroSecreto = Math.floor((Math.random()) * 100) + 1;
+    numeroSecreto = Math.floor(Math.random() * 100) + 1;
     contadorIntentos = 0;
+    document.getElementById("intentos").value = contadorIntentos;
     console.log(numeroSecreto);
 
 }
@@ -21,15 +22,23 @@ function comenzar() {
 function verificar()
 {
 
-    contadorIntentos += 1;
+    contadorIntentos++;
     document.getElementById("intentos").value = contadorIntentos;
 
     var num = document.getElementById("numero").value;
 
     if (num == numeroSecreto) {
 
-      alert("¡Felicidades, adivinó el número secreto en solo "+contadorIntentos+" intentos!");
+      if (contadorIntentos == 1) {
 
+        alert("¡Felicidades, adivinó el número secreto en solo "+contadorIntentos+" intento!");
+
+      } else {
+
+        alert("¡Felicidades, adivinó el número secreto en solo "+contadorIntentos+" intentos!");
+
+      }
+                                                     
     } else if (num < numeroSecreto) {
 
       alert("El número secreto es más grande que "+num+".");

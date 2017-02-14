@@ -1,5 +1,5 @@
 var miTemporizador ;
-var contador=0;
+var contador = 0;
 
 function inicio()
 {

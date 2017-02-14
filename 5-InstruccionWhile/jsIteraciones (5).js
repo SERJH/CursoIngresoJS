@@ -1,12 +1,12 @@
 function Mostrar()
 {
 
-var sexo = prompt("ingrese f ó m .");
+var sexo = prompt("Ingrese F o M.");
 
-    while (sexo != "f" && sexo != "m") {
+    while (sexo != "f" && sexo != "F" && sexo != "m" && sexo != "M") {
 
-        var sexo = prompt("ingrese f ó m .");
-
+        var sexo = prompt("Ingrese F o M.");
+        // toLowerCase toUpperCase
     }
 
 document.getElementById("Sexo").value = sexo;
