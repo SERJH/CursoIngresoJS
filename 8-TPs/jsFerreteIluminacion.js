@@ -10,5 +10,148 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    var cantidad = parseInt(document.getElementById("Cantidad").value);
+    var precio = 35;
+    var precioFinal;
+
+    if (cantidad >= 6) { 
+
+        precioFinal = (cantidad * precio) * 0.5;
+
+        if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+". IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+
+    } else if (cantidad == 5) { 
+
+        if (document.getElementById("Marca").value == "ArgentinaLuz") {
+
+            precioFinal = (cantidad * precio) * 0.6;
+
+            if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+".IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+
+        } else {
+
+            precioFinal = (cantidad * precio) * 0.7;
+
+            if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+".IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+
+        }
+
+    } else if (cantidad == 4) {
+
+        if (document.getElementById("Marca").value == "ArgentinaLuz"
+         || document.getElementById("Marca").value == "FelipeLamparas") {
+
+            precioFinal = (cantidad * precio) * 0.75;
+
+            if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+".IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+
+         } else {
+
+            precioFinal = (cantidad * precio) * 0.8;
+
+            if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+".IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+
+         }
+
+    } else if (cantidad == 3) {
+
+        if (document.getElementById("Marca").value == "ArgentinaLuz") {
+
+            precioFinal = (cantidad * precio) * 0.85;
+
+            if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+".IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+
+        } else if (document.getElementById("Marca").value == "FelipeLamparas") {
+
+            precioFinal = (cantidad * precio) * 0.9;
+
+            if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+".IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+
+        } else {
+
+            precioFinal = (cantidad * precio) * 0.95;
+
+            if (precioFinal > 120) {
+
+            precioFinal *= 1.1;
+            document.getElementById("precioDescuento").value = "Precio final: "+precioFinal+".IIBB Usted pagó "
+            +(precioFinal * 0.1)+" de ingresos brutos.";
+
+            } else {
+
+                document.getElementById("precioDescuento").value = "Precio final: "+precioFinal;
+
+            }
+        }
+    }
 }

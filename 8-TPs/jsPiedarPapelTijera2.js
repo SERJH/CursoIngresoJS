@@ -1,104 +1,112 @@
 var eleccionMaquina;
-var ContadorDeEmpates=0;
-var ContadorDeGanadas=0;
-var ContadorDePerdidas=0;
+var contadorDeEmpates = 0;
+var contadorDeGanadas = 0;
+var contadorDePerdidas = 0;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 3
-	 	numeroSecreto =Math.floor( Math.random()*3)+1;
-		//alert(numeroSecreto);
-		switch(numeroSecreto)
-		{
-			case 1:
-				eleccionMaquina="piedra";
-				break;
-			case 2:
-				eleccionMaquina="papel";
-				break;
-			case 3:
-				eleccionMaquina="tijera";
-				break;
+	
+    eleccionMaquina = Math.floor(Math.random() * 3) + 1;
+    console.log(eleccionMaquina);
 
-		}
-		//alert(eleccionMaquina);
-
-
-
-}//FIN DE LA FUNCIÓN
+}
 function piedra()
 {
-	alert("la maquina selecciono: "+eleccionMaquina);
-	eleccionHumano="piedra";
-	if(eleccionHumano==eleccionMaquina)
-	{
-		alert("empate.");	
-		ContadorDeEmpates++;	
-	}
-	else if(eleccionMaquina=="tijera")
-	{
-		alert("vos ganastes.");
-		ContadorDeGanadas++;
-	}
-	else
-	{
-		alert("ganó la Maquina.");
-		ContadorDePerdidas++;
-	}
+	
+    switch (eleccionMaquina)
+    {
+        case 1:
+        {
+            alert("La máquina eligió piedra, ¡Empataste!");
+			contadorDeEmpates += 1;
+            break;
+        }
+        
+        case 2:
+        {
+            alert("La máquina eligió papel, ¡Perdiste!");
+			contadorDePerdidas += 1;
+            break;
+        }
 
-mostarResultado();
+        case 3:
+        {
+            alert("La máquina eligió tijeras, ¡Ganaste!");
+			contadorDeGanadas += 1;
+            break;
+        }
+    }
 
-}//FIN DE LA FUNCIÓN
+	resultado();
+
+}
 function papel()
 {
-	alert("la maquina selecciono: "+eleccionMaquina);
-	eleccionHumano="papel";
-	if(eleccionHumano==eleccionMaquina)
-	{
-		alert("empate.");
-		ContadorDeEmpates++;		
 
-	}
-	else if(eleccionMaquina=="piedra")
-	{
-		alert("vos ganastes.");
-		ContadorDeGanadas++;
-	}
-	else
-	{
-		alert("ganó la Maquina.");
-		ContadorDePerdidas++;
-	}
-mostarResultado();
-}//FIN DE LA FUNCIÓN
+    switch (eleccionMaquina)
+    {
+        case 1:
+        {
+            alert("La máquina eligió piedra, ¡Ganaste!");
+			contadorDeGanadas += 1;
+            break;
+        }
+        
+        case 2:
+        {
+            alert("La máquina eligió papel, ¡Empataste!");
+			contadorDeEmpates += 1;
+            break;
+        }
+
+        case 3:
+        {
+            alert("La máquina eligió tijeras, ¡Perdiste!");
+			contadorDePerdidas += 1;
+            break;
+        }
+    }
+
+	resultado();
+
+}
 function tijera()
 {
-	alert("la maquina selecciono: "+eleccionMaquina);
-	eleccionHumano="tijera";
-	if(eleccionHumano==eleccionMaquina)
-	{
-		alert("empate.");
-		ContadorDeEmpates++;		
-	}
-	else if(eleccionMaquina=="papel")
-	{
-		alert("vos ganastes.");
-		ContadorDeGanadas++;
-	}
-	else
-	{
-		alert("ganó la Maquina.");
-		ContadorDePerdidas++;
-	}
-mostarResultado();
-}//FIN DE LA FUNCIÓN
+	
+    switch (eleccionMaquina)
+    {
+        case 1:
+        {
+            alert("La máquina eligió piedra, ¡Perdiste!");
+			contadorDePerdidas += 1;
+            break;
+        }
+        
+        case 2:
+        {
+            alert("La máquina eligió papel, ¡Ganaste!");
+			contadorDeGanadas += 1;
+            break;
+        }
 
-function mostarResultado()
-{
+        case 3:
+        {
+            alert("La máquina eligió tijeras, ¡Empataste!");
+			contadorDeEmpates += 1;
+            break;
+        }
+    }
 
-document.getElementById('empatadas').value=ContadorDeEmpates + " partidas empatadas.";
-document.getElementById('perdidas').value=ContadorDePerdidas + " partidas perdidas.";
-document.getElementById('ganadas').value=ContadorDeGanadas + " partidas ganadas.";
+	resultado();
 
-comenzar();
 }
+
+function resultado() {
+
+	document.getElementById("ganadas").value = contadorDeGanadas+" Partidas ganadas.";
+	document.getElementById("perdidas").value = contadorDePerdidas+" Partidas perdidas.";
+	document.getElementById("empatadas").value = contadorDeEmpates+" Partidas empatadas.";
+
+	comenzar();
+}
+

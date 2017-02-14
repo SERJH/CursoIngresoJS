@@ -12,17 +12,82 @@ Más de 10 intentos: “afortunado en el amor!!”.*/
 var numeroSecreto; 
 var contadorIntentos;
 
-function comenzar()
-{
-	//Genero el número RANDOM entre 1 y 100
-	 
-	
+function comenzar() {
+
+    numeroSecreto = Math.floor((Math.random()) * 100) + 1;
+    contadorIntentos = 0;
+    console.log(numeroSecreto);
 
 }
 
 function verificar()
 {
-	
-	
+
+    contadorIntentos += 1;
+    document.getElementById("intentos").value = contadorIntentos;
+
+    var num = document.getElementById("numero").value;
+
+    if (num == numeroSecreto) {
+
+	  switch (contadorIntentos) 
+	  {
+		  case 1:
+		  {
+		      alert("Ha adivinado el número en un solo intento, usted es un psíquico.");
+			  break;
+		  }
+
+		  case 2:
+		  {
+			  alert("Ha adivinado el número en sólo dos intentos, excelente percepción.");
+			  break;
+		  }
+
+		  case 3:
+		  {
+			  alert("Ha adivinado el número en sólo tres intentos, esto es suerte."); 
+			  break;
+		  }
+
+		  case 4:
+		  {
+			  alert("Ha adivinado el número en cuatro intentos, excelente técnica.");
+			  break;
+		  }
+
+		  case 5:
+		  {
+			  alert("Ha adivinado el número en cinco intentos, usted está en la media.");
+			  break;
+		  }
+
+		  case 6:
+		  case 7:
+		  case 8:
+		  case 9:
+		  case 10:
+		  {
+			  alert("Has adivinado el número, sin embargo le hace falta técnica.");
+			  break;
+		  }
+
+		  default :
+		  {
+			  alert("Afortunado en el amor...");
+			  break;
+		  }
+	  }	
+      
+
+    } else if (num < numeroSecreto) {
+
+      alert("El número secreto es más grande que "+num+".");
+
+    } else {
+
+      alert("El número secreto es más chico que "+num+".");
+
+    }
 
 }

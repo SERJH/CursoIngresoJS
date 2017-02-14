@@ -9,21 +9,91 @@ var eleccionMaquina;
 function comenzar()
 {
 	
+    eleccionMaquina = Math.floor(Math.random() * 3) + 1;
+    console.log(eleccionMaquina);
 
-
-}//FIN DE LA FUNCIÓN
+}
 function piedra()
 {
 	
+    switch (eleccionMaquina)
+    {
+        case 1:
+        {
+            alert("La máquina eligió piedra, ¡Empataste!");
+            comenzar();
+            break;
+        }
+        
+        case 2:
+        {
+            alert("La máquina eligió papel, ¡Perdiste!");
+            comenzar();
+            break;
+        }
 
-}//FIN DE LA FUNCIÓN
+        case 3:
+        {
+            alert("La máquina eligió tijeras, ¡Ganaste!");
+            comenzar();
+            break;
+        }
+    }
+
+}
 function papel()
 {
 
+    switch (eleccionMaquina)
+    {
+        case 1:
+        {
+            alert("La máquina eligió piedra, ¡Ganaste!");
+            comenzar();
+            break;
+        }
+        
+        case 2:
+        {
+            alert("La máquina eligió papel, ¡Empataste!");
+            comenzar();
+            break;
+        }
 
-}//FIN DE LA FUNCIÓN
+        case 3:
+        {
+            alert("La máquina eligió tijeras, ¡Perdiste!");
+            comenzar();
+            break;
+        }
+    }
+
+}
 function tijera()
 {
 	
+    switch (eleccionMaquina)
+    {
+        case 1:
+        {
+            alert("La máquina eligió piedra, ¡Perdiste!");
+            comenzar();
+            break;
+        }
+        
+        case 2:
+        {
+            alert("La máquina eligió papel, ¡Ganaste!");
+            comenzar();
+            break;
+        }
 
-}//FIN DE LA FUNCIÓN
+        case 3:
+        {
+            alert("La máquina eligió tijeras, ¡Empataste!");
+            comenzar();
+            break;
+        }
+    }
+
+}
