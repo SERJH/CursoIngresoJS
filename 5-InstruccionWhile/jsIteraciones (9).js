@@ -1,8 +1,9 @@
 function Mostrar()
 {
 
-	var maximo = 0;
-	var minimo = 0;	
+	var maximo;
+	var minimo;	
+	var primera = true;
 	var respuesta = true;
 
 	while (respuesta == true) {
@@ -10,6 +11,14 @@ function Mostrar()
 		var num = prompt("Ingrese un numero:");
 		respuesta = confirm("¿Seguir ingresando numeros?");
 		num = parseInt(num);
+
+		if (primera) {
+
+			primera = false;
+			maximo = num;
+			minimo = num;
+
+		}
 
 		if (num > maximo) {
 			maximo = num;
