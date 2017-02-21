@@ -12,7 +12,7 @@ var contadorIntentos = 0;
 
 function comenzar() {
 
-    numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    numeroSecreto = Math.floor(Math.random() * 100) + 1; // Math.floor(Math.random() * (max - min)) + min;
     contadorIntentos = 0;
     document.getElementById("intentos").value = contadorIntentos;
     console.log(numeroSecreto);
@@ -32,10 +32,12 @@ function verificar()
       if (contadorIntentos == 1) {
 
         alert("¡Felicidades, adivinó el número secreto en solo "+contadorIntentos+" intento!");
+        comenzar();
 
       } else {
 
         alert("¡Felicidades, adivinó el número secreto en solo "+contadorIntentos+" intentos!");
+        comenzar();
 
       }
                                                      
